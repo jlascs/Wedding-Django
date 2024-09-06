@@ -1,0 +1,69 @@
+{% load static %}
+<!-- Main header start -->
+<header class="main-header sticky-header header-with-top">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="" href="{% url 'home' %}">
+                <img src="{% static 'img/logos/logo.png' %}" alt="WZONE">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="navbar-collapse collapse w-100" id="navbar">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home' %}">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="{% url 'services' %}">
+                                Services
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="{% url 'services'%}">All Services</a>
+                                <a class="dropdown-item" href="../search?keyword=&service_type=Photographer">Photographer</a>
+                                <a class="dropdown-item" href="../search?keyword=&service_type=Venue">Venue</a>
+                                <a class="dropdown-item" href="../search?keyword=&service_type=Caterer">Caterer</a>
+                                <a class="dropdown-item" href="../search?keyword=&service_type=Decorator">Decorator</a>
+                                <a class="dropdown-item" href="../search?keyword=&service_type=Makeup">Makeup</a>
+                                <a class="dropdown-item" href="../search?keyword=&service_type=Mehndi">Mehndi</a>
+                                <a class="dropdown-item" href="../search?keyword=&service_type=Pandit">Pandit</a>
+                                <a class="dropdown-item" href="../search?keyword=&service_type=Transport">Transport</a>
+                                <a class="dropdown-item" href="../search?keyword=&service_type=DJ">DJ</a>
+                                <a class="dropdown-item" href="../search?keyword=&service_type=Wedding+planner">Wedding planner</a>
+                              </div>
+
+
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'about' %}">
+                            About
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'testimonials' %}">
+                            Testimonials
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'photos' %}">
+                            Photos
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown m-hide">
+                        <a href="#full-page-search" class="nav-link h-icon">
+                            <i class="fa fa-search"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+<!-- Main header end -->

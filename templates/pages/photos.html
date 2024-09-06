@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %} | Photo Galley {% endblock %}
+
+{% block content %}
+
+{% load static %}
+
+
+<!-- Sub banner start -->
+<div class="sub-banner overview-bgi">
+    <div class="container breadcrumb-area">
+        <div class="breadcrumb-areas">
+            <h1>Photo Galley</h1>
+            <ul class="breadcrumbs">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li class="active">Photo Galley </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Sub Banner end -->
+
+<!-- Featured car start -->
+<div class="featured-car content-area">
+    <div class="container">
+        <!-- Main title -->
+        <div class="row">
+            {% for images in images %}
+            <div class="slick-slide-item">
+                <div class="car-box-3">
+                    <div class="car-thumbnail">
+                            <div class="price-box">
+                            </div>
+                            <img class="d-block w-100" src="{{ images.photo.url }}" alt="{{ images.title}}" height="262px"
+                                style="min-width: 350px; max-width: 350px;">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<!-- Featured car end -->
+
+{% endblock %}
